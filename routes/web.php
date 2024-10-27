@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/berita', [PostController::class, 'lihat'])->name('posts.lihat');
+Route::get('/berita', [PostController::class, 'lihat'])->name('posts.lihat')->middleware('auth');
 Route::resource('books', BookController::class)->middleware('auth');
 
 Route::get('/migrate-fresh', function () {
