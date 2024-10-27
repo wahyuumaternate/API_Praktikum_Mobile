@@ -16,6 +16,12 @@
                 <span>Books</span>
             </a>
         </li><!-- End Dashboard Nav -->
+        <li class="nav-item">
+            <a class="nav-link {{ request()->is('berita*') ? '' : 'collapsed' }}" href="{{ route('posts.lihat') }}">
+                <i class="bi bi-grid"></i>
+                <span>Berita</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
 
 
     </ul>

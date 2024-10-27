@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookApiController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::apiResource('books', BookApiController::class);
+Route::apiResource('posts', PostController::class);
